@@ -1,0 +1,10 @@
+from pyamaze import maze , COLOR , agent
+m=maze(15,15)
+m.CreateMaze(theme='light')
+a=agent(m , shape="arrow" , filled="True" , footprints=True)
+#print(m.grid)
+#print(m.maze_map)
+print(m.path)
+m.tracePath({a:m.path} , delay=30)
+#m.enableArrowKey(a)
+m.run()
